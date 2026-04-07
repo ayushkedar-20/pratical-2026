@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  margin:0;
+  font-family:sans-serif;
+  text-align:center;
+  color:white;
+  background:linear-gradient(270deg,#ff6a00,#ee0979,#00c9ff);
+  background-size:600% 600%;
+  animation:bgMove 8s infinite alternate;
+}
+
+/* Moving gradient */
+@keyframes bgMove{
+  0%{background-position:0%;}
+  100%{background-position:100%;}
+}
+
+/* Title animation */
+h1{
+  margin:20px;
+  animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+
+/* Container */
+.container{
+  column-count:3;
+  padding:10px;
+}
+
+/* Cards */
+.box{
+  background:#ffffff22;
+  margin:10px;
+  padding:20px;
+  border-radius:20px;
+  animation:pop 1s ease;
+  transition:0.4s;
+}
+
+/* Entry animation */
+@keyframes pop{
+  from{opacity:0; transform:scale(0.5);}
+  to{opacity:1; transform:scale(1);}
+}
+
+/* Hover effect */
+.box:hover{
+  transform:scale(1.15) rotate(5deg);
+  box-shadow:0 0 20px #fff;
+}
+
+/* Emoji animation */
+.box span{
+  display:block;
+  font-size:30px;
+  animation:spin 3s infinite linear;
+}
+
+@keyframes spin{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+/* Responsive */
+@media(max-width:700px){
+  .container{column-count:1;}
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎉 Animated Webpage ✨🔥</h1>
+
+<div class="container">
+  <div class="box"><span>🚀</span>Fast</div>
+  <div class="box"><span>🎨</span>Beautiful</div>
+  <div class="box"><span>📱</span>Responsive</div>
+  <div class="box"><span>⚡</span>Dynamic</div>
+  <div class="box"><span>💡</span>Creative</div>
+</div>
+
+</body>
+</html>

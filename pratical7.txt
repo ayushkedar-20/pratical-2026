@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chhatrapati Shivaji Maharaj Tribute</title>
+
+<style>
+
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #ff9933, #ff5e62, #8e2de2);
+        color: #fff;
+        scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    nav {
+        background: rgba(0,0,0,0.85);
+        padding: 15px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: gold;
+        transform: scale(1.2);
+    }
+
+    /* HEADER */
+    header {
+        text-align: center;
+        padding: 60px 20px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+        font-size: 50px;
+        color: #ffd700;
+        text-shadow: 2px 2px 10px black;
+    }
+
+    header p {
+        font-size: 22px;
+        font-style: italic;
+    }
+
+    .profile-img {
+        width: 220px;
+        border-radius: 50%;
+        border: 6px solid gold;
+        margin-top: 20px;
+        animation: float 3s infinite ease-in-out;
+        box-shadow: 0 0 25px rgba(0,0,0,0.7);
+    }
+
+    /* SECTIONS */
+    section {
+        width: 85%;
+        margin: 30px auto;
+        padding: 25px;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.3);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+        animation: slideUp 1.5s ease;
+    }
+
+    h2 {
+        border-left: 6px solid gold;
+        padding-left: 10px;
+        color: #ffd700;
+    }
+
+    .card {
+        margin-top: 15px;
+        padding: 15px;
+        border-radius: 15px;
+        background: rgba(255,255,255,0.1);
+        transition: 0.4s;
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        background: rgba(255,255,255,0.2);
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    /* BUTTON */
+    .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 25px;
+        background: gold;
+        color: black;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: orange;
+        transform: scale(1.1);
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: rgba(0,0,0,0.85);
+        margin-top: 30px;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+        100% { transform: translateY(0); }
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <ul>
+        <li><a href="#about">👑 About</a></li>
+        <li><a href="#history">📜 History</a></li>
+        <li><a href="#achievements">⚔ Achievements</a></li>
+        <li><a href="#legacy">🌟 Legacy</a></li>
+    </ul>
+</nav>
+
+<!-- HEADER -->
+<header>
+    <h1>🚩 Chhatrapati Shivaji Maharaj 🚩</h1>
+    <p>🔥 Founder of the Maratha Empire | Symbol of Courage 🔥</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Shivaji_British_Museum.jpg" class="profile-img">
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>👑 About</h2>
+    <div class="card">
+        <p>
+            🇮🇳 Chhatrapati Shivaji Maharaj was a महान warrior king and the founder of the Maratha Empire.
+            He is known for his bravery, intelligence, and excellent military strategies.
+        </p>
+    </div>
+</section>
+
+<!-- HISTORY -->
+<section id="history">
+    <h2>📜 History</h2>
+    <div class="card">
+        <p>
+            🏰 Born in 1630, Shivaji Maharaj established a strong kingdom by fighting against powerful empires.
+            His coronation in 1674 marked the rise of a स्वतंत्र Maratha kingdom.
+        </p>
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+    <h2>⚔ Achievements</h2>
+    <div class="card">
+        <ul>
+            <li>⚔ Established Hindavi Swarajya</li>
+            <li>🏰 Built strong forts like Raigad</li>
+            <li>🚢 Developed a powerful navy</li>
+            <li>🛡 Known for guerrilla warfare tactics</li>
+        </ul>
+    </div>
+</section>
+
+<!-- LEGACY -->
+<section id="legacy">
+    <h2>🌟 Legacy</h2>
+    <div class="card">
+        <p>
+            💫 Shivaji Maharaj remains a symbol of bravery, justice, and good governance.
+            His ideals continue to inspire millions across India.
+        </p>
+        <a href="#" class="btn">📖 Learn More</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>🚩 Tribute with Pride | Jai Bhavani Jai Shivaji ❤️</p>
+</footer>
+
+</body>
+</html>

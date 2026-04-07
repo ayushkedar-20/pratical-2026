@@ -1,0 +1,15 @@
+@DOCTYPE himi» cheml lang-"en">
+cheed>
+ometa charset ="UTF-8">
+Title>Photo and Link Example</title>
+Chead> chody»
+4hl>photo</hl>
+cimg
+src="https://wpengine.com/wpcontent/uploads/2021/05/optimize
+images-1024x681.jpg"
+alt="Sample Image"
+width="300"
+height="200">
+Chr><br
+<a href="https://chatgpt.com/"> Visit Google <la>
+<body <IntmP

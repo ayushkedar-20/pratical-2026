@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Tech Seminar 2026 Registration</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --accent: #00f2fe;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(102, 126, 234, 0.15) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, rgba(118, 75, 162, 0.15) 0, transparent 50%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 50px 15px;
+        }
+
+        .form-card {
+            width: 100%;
+            max-width: 650px;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+
+        .header-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header-logo i {
+            font-size: 3.5rem;
+            color: var(--accent);
+            filter: drop-shadow(0 0 10px var(--accent));
+        }
+
+        h2 { text-align: center; margin-top: 10px; letter-spacing: 1px; }
+
+        fieldset {
+            border: 2px solid rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        fieldset:hover { border-color: var(--accent); }
+
+        legend {
+            font-weight: 600;
+            padding: 0 15px;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .input-row { margin-bottom: 20px; }
+
+        label { display: block; margin-bottom: 8px; font-size: 0.85rem; opacity: 0.8; }
+
+        /* Input Attributes Styling */
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"], 
+        select, 
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            color: white;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        input:focus { border-color: var(--accent); background: rgba(255,255,255,0.1); }
+
+        .flex-group { display: flex; gap: 15px; flex-wrap: wrap; }
+
+        .checkbox-item {
+            background: rgba(255,255,255,0.05);
+            padding: 10px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 18px;
+            border: none;
+            border-radius: 15px;
+            background: var(--gradient);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.4s;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(118, 75, 162, 0.6);
+        }
+
+        /* Success Message Area */
+        #registration-success {
+            display: none;
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(0, 242, 254, 0.1);
+            border-left: 5px solid var(--accent);
+            border-radius: 10px;
+            text-align: center;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-card">
+    <div class="header-logo">
+        <i class="fas fa-rocket"></i>
+        <h2>TECH SUMMIT 2026 🌐</h2>
+        <p style="text-align:center; opacity:0.6;">Secure your spot in the future!</p>
+    </div>
+
+    <form id="megaForm">
+        <fieldset>
+            <legend>👤 PERSONAL DETAILS</legend>
+            <div class="input-row">
+                <label>Full Name (min 3 chars) 📛</label>
+                <input type="text" placeholder="e.g. Alex Smith" required minlength="3" maxlength="30" title="Please enter your full legal name" autofocus>
+            </div>
+            <div class="flex-group">
+                <div style="flex:1">
+                    <label>Email 📧</label>
+                    <input type="email" placeholder="alex@tech.com" required title="We need this to send your ticket">
+                </div>
+                <div style="flex:1">
+                    <label>Phone (10 digits) 📱</label>
+                    <input type="tel" pattern="[0-9]{10}" placeholder="1234567890" required title="Format: 10 digit mobile number">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>📊 EXPERIENCE LEVEL</legend>
+            <div class="flex-group">
+                <label class="checkbox-item">
+                    <input type="radio" name="level" value="junior" required checked> 🌱 Junior
+                </label>
+                <label class="checkbox-item">
+                    <input type="radio" name="level" value="senior"> 🌳 Senior
+                </label>
+                <label class="checkbox-item">
+                    <input type="radio" name="level" value="expert"> 💎 Expert
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>🛠️ WORKSHOP TRACK</legend>
+            <select required>
+                <option value="" disabled selected>Select your preferred track...</option>
+                <option value="ai">🤖 Artificial Intelligence & LLMs</option>
+                <option value="web">💻 Full-Stack Web Dev</option>
+                <option value="cyber">🛡️ Cybersecurity Essentials</option>
+                <option value="block">⛓️ Blockchain & Web3</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>🍕 EXTRAS & PERKS</legend>
+            <div class="flex-group">
+                <label class="checkbox-item">
+                    <input type="checkbox"> 🍱 Free Lunch
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox"> 👕 Event T-Shirt
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox"> 📜 Digital Certificate
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>📝 SPECIAL REQUESTS</legend>
+            <textarea rows="3" placeholder="Tell us about any dietary requirements or accessibility needs..." maxlength="200"></textarea>
+        </fieldset>
+
+        <button type="submit">🔥 Register Now for $0.00</button>
+    </form>
+
+    <div id="registration-success">
+        <h2 style="color: var(--accent);">🎊 YOU REGISTERED SUCCESSFULLY! 🎊</h2>
+        <p>Your pass has been generated. Check your inbox for the 🎫 QR Code.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Welcome to the team! 🤝</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('megaForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Hide the form nicely
+        this.style.opacity = '0.3';
+        this.style.pointerEvents = 'none';
+        
+        // Show success message
+        document.getElementById('registration-success').style.display = 'block';
+        
+        // Scroll to success message
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>

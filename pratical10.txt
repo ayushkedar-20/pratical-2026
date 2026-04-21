@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>🌍 Frame Demo</title>
+
+<style>
+body {
+  margin:0;
+  font-family:sans-serif;
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  animation: bg 5s infinite alternate;
+}
+
+h2 {
+  text-align:center;
+  color:white;
+  animation: bounce 2s infinite;
+}
+
+.container {
+  display:flex;
+  height:90vh;
+}
+
+iframe {
+  border:none;
+  width:50%;
+  transition:0.3s;
+}
+
+iframe:hover {
+  transform:scale(1.05);
+}
+
+@keyframes bounce {
+  50% {transform: translateY(-10px);}
+}
+
+@keyframes bg {
+  from {filter:hue-rotate(0);}
+  to {filter:hue-rotate(90deg);}
+}
+</style>
+</head>
+
+<body>
+
+<h2>🌟 Frame + Map Demo 📍</h2>
+
+<div class="container">
+  <!-- Map -->
+  <iframe src="https://www.google.com/maps?q=Nagpur&output=embed"></iframe>
+
+  <!-- External Page -->
+  <iframe src="https://www.wikipedia.org"></iframe>
+</div>
+
+</body>
+</html>

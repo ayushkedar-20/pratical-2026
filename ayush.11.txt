@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML5 APIs Demo</title>
+
+<style>
+body{
+    font-family:sans-serif;
+    text-align:center;
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    color:white;
+}
+.box{
+    background:rgba(255,255,255,0.2);
+    margin:15px auto;
+    padding:15px;
+    width:260px;
+    border-radius:10px;
+}
+
+/* drag */
+#drag{
+    padding:10px;
+    background:yellow;
+    color:black;
+    display:inline-block;
+    border-radius:8px;
+    cursor:grab;
+}
+
+#drop{
+    margin-top:10px;
+    padding:15px;
+    border:2px dashed white;
+}
+
+button{
+    padding:6px 10px;
+    margin-top:5px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>HTML5 APIs Demo 🚀</h2>
+
+<!-- Drag & Drop -->
+<div class="box">
+    <h3>Drag & Drop 🎯</h3>
+    <div id="drag" draggable="true">😎 Drag me</div>
+    <div id="drop">Drop here 📦</div>
+</div>
+
+<!-- Geolocation -->
+<div class="box">
+    <h3>Geolocation 📍</h3>
+    <button onclick="getLocation()">Get Location</button>
+    <p id="loc"></p>
+    <iframe id="map" width="100%" height="120"></iframe>
+</div>
+
+<!-- Storage -->
+<div class="box">
+    <h3>Web Storage 💾</h3>
+    <input id="nameInput" placeholder="Enter name">
+    <br>
+    <button onclick="saveName()">Save</button>
+    <button onclick="loadName()">Load</button>
+    <p id="output"></p>
+</div>
+
+<script>
+// Drag & Drop
+const drag = document.getElementById("drag");
+const drop = document.getElementById("drop");
+
+drag.addEventListener("dragstart", function(e){
+    e.dataTransfer.setData("text/plain","drag");
+});
+
+drop.addEventListener("dragover", function(e){
+    e.preventDefault();
+});
+
+drop.addEventListener("drop", function(e){
+    e.preventDefault();
+    drop.innerHTML = "";
+    drop.appendChild(drag);
+});
+
+// Geolocation
+function getLocation(){
+    const loc = document.getElementById("loc");
+
+    if(!navigator.geolocation){
+        loc.innerHTML = "❌ Not supported";
+        return;
+    }
+
+    navigator.geolocation.getCurrentPosition(function(pos){
+        let lat = pos.coords.latitude;
+        let lon = pos.coords.longitude;
+
+        loc.innerHTML = "📍 " + lat.toFixed(4) + ", " + lon.toFixed(4);
+
+        document.getElementById("map").src =
+            "https://maps.google.com/maps?q=" + lat + "," + lon + "&output=embed";
+    }, function(){
+        loc.innerHTML = "❌ Permission denied";
+    });
+}
+
+// Web Storage
+function saveName(){
+    let name = document.getElementById("nameInput").value;
+    localStorage.setItem("username", name);
+    alert("Saved!");
+}
+
+function loadName(){
+    let name = localStorage.getItem("username");
+    document.getElementById("output").innerHTML = "👋 " + name;
+}
+</script>
+
+</body>
+</html>
